@@ -78,16 +78,28 @@ label:after {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: #78cbf1;
+    background-color: #cb8a61;
 }
 
 .controls label:hover:after,
 .controls label:focus:after {
-    background-color: #e1e5ee;
+    background-color: #eee6e1;
 }
 
 .controls label:active:after {
-    background-color: #a2a6af;
+    background-color: #cb8a6188;
+}
+
+@keyframes slide {
+    0% {
+        transform: translate(100%, 0);
+    }
+}
+
+@keyframes slide-text {
+    0% {
+        transform: translate(-200%, 0);
+    }
 }
 
 #slide1:checked ~ .controls label:nth-child(1):after,
@@ -95,8 +107,8 @@ label:after {
 #slide3:checked ~ .controls label:nth-child(3):after,
 #slide4:checked ~ .controls label:nth-child(4):after,
 #slide5:checked ~ .controls label:nth-child(5):after {
-    border: 3px solid #78cbf1;
-    background-color: #051146;
+    border: 3px solid #cb8a61;
+    background-color: #171718;
 }
 
 #slide1:checked ~ .slider .slide-1,
@@ -105,7 +117,9 @@ label:after {
 #slide4:checked ~ .slider .slide-4,
 #slide5:checked ~ .slider .slide-5 {
     display: block;
+    animation: slide 1.5s;
 }
+
 
 .text {
     font-size: 25px;
@@ -118,6 +132,7 @@ label:after {
 #slide4:checked ~ .slide-text .text-4,
 #slide5:checked ~ .slide-text .text-5 {
     display: block;
+    animation: slide-text 1s;
 }
 
 @media (max-width: 800px) {
