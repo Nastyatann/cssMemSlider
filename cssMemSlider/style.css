@@ -120,3 +120,27 @@ label:after {
     display: block;
 }
 
+@media (max-width: 800px) {
+
+    .controls,
+    .slide-text {
+        width: 100%;
+        justify-content: center;
+        padding: 30px 0 0;
+    }
+
+    .slider {
+        height: 60vh;
+    }
+
+    .slide-text {
+        order: 1;
+    }
+}
+
+@media (max-width: 420px) {
+
+    .slide-text {
+        justify-content: flex-start;
+    }
+}
